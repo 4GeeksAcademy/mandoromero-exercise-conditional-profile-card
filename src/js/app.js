@@ -33,14 +33,18 @@ function render(variables = {}) {
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
-          <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
+          <h1>${variables.name ? variables.name : "placeholder"} ${
+    variables.lastName ? variables.lastName : "placeholder"
+  }</h1> 
+          <h2>${variables.city ? variables.city : "placeholder"} ${
+    variables.country ? variables.country : "placeholder"
+  }</h2>
+          <h3></h3>
           <ul class="position-right">
-            <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/school/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://github.com/mandoromero"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
